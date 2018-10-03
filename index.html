@@ -41,19 +41,19 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+            <a class="nav-link js-scroll-trigger" href="#work-experience">Work Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#certificates">Certificates</a>
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
           </li>
         </ul>
       </div>
@@ -69,7 +69,7 @@
           <!-- <div class="subheading mb-5">Boston, MA
             <a href="mailto:dtadmor2@gmail.com">dtadmor2@gmail.com</a>
           </div> -->
-          <p class="lead mb-5">I am a driven mathematician turned data scientist. As an educator for the past seven years, I have learned many of the skills required to turn passion into reality.</p>
+          <p class="lead mb-5">Driven mathematician and educator turned data scientist. Skilled at facilitating small and large groups, working in teams, breaking down complex concepts into manageable chunks, building and implementing organization-wide systems, and balancing multi-year projects with short term deadlines.</p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/dtadmor" target="_blank">
               <i class="fab fa-linkedin-in"></i>
@@ -80,13 +80,16 @@
             <a href="mailto:dtadmor2@gmail.com" target="_blank">
               <i class="fa fa-envelope"></i>
             </a>
+            <a href="./ResumeDanTadmor.pdf" target="_blank" download>
+              <i class="fa fa-file"></i>
+            </a>
           </div>
         </div>
       </section>
 
       <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Projects">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
         <div class="my-auto">
           <h2 class="mb-5">Projects</h2>
 
@@ -94,7 +97,7 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">West Nile Virus</h3>
               <div class="subheading mb-3">Surveillance and Response</div>
-              <p>This was a team project with the goal of creating a cost benefit analysis of when and where the city of Chicago could spray pesticides in order to reduce the affect of West Nile virus on humans. We began by researching effective surveillance techniques and the best predictors of West Nile virus. We then retrieved mosquito trap data for the last 12 years from the city of Chicago website along with weather data for those years from the NOAA. Using the data, we oversampled positive cases in order to create a model that was sensitive to its presence. To avoid overfitting on sparse data, we used a random forest with a small depth to predict the dates and locations of mosquitoes with the disease. Taking into account areas with dense susceptible populations, the predictions of our model, and the cost of spraying, we created our recommendations for the city of Chicago.</p>
+              <p>This was a team project with the goal of creating a cost benefit analysis of when and where the city of Chicago could spray pesticides in order to reduce the affect of West Nile virus on humans. We began by researching effective surveillance techniques and the best predictors of West Nile virus. We then retrieved mosquito trap data for the last 12 years from the city of Chicago website along with weather data for those years from the NOAA. Using the data, I oversampled positive cases in order to create a model that was sensitive to its presence. To avoid overfitting on sparse data, I used a random forest with a small depth. These methods increased our model's sensitivity from 0 to .77. Taking into account areas with dense susceptible populations, the predictions of our model, and the cost of spraying, we created our recommendations for the city of Chicago. <a href="https://www.github.com/dtadmor/West-Nile-Virus">See more on github</a></p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary"></span>
@@ -105,7 +108,7 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Board Games and Video Games</h3>
               <div class="subheading mb-3">Understanding Different Languages</div>
-              <p>The goal of this project was to better understand the board gaming and video gaming communities by determining the differences in their word choice. Using the Reddit API, I retrieved over 5,000 posts on board games and video games. I vectorized the words from those posts using TFIDF. From there, I optimized different classifiers for the data. The best classifier was able to determine subreddits with 98% accuracy. Using it, I could determine which words were the best predictors of each subreddit.</p>
+              <p>The goal of this project was to better understand the board gaming and video gaming communities by determining the differences in their word choice. Using the Reddit API, I scraped over 5,000 posts from the board game and video game subreddits. I stemmed and applied a TFIDF vectorizer to the posts. From there, I optimized the hyperparameters of different classifiers. I chose a logistic regression due to strong predicatability and interpretability. It was able to determine subreddits with 98% accuracy. Using it, I could determine which words were the best predictors of each subreddit. <a href="https://www.github.com/dtadmor/Reddit-NLP">See more on github</a></p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary"></span>
@@ -116,7 +119,7 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Ames, Iowa Housing</h3>
               <div class="subheading mb-3">Predicting Homeprices</div>
-              <p>The goal of the project was to create a model to predict home prices in Ames, Iowa using a dataset with around 2000 homes and 80 features. I began by cleaning the data and exploring it to understand the relationships of the features with each other and with home prices. Once completed, I used background knowledge to create features that had stronger correlations with sale price. Using a few different functions that I created, I narrowed down the features to ones that would work well together. Finally, I used polynomial features and different forms of regularized regression to predict the home prices.</p>
+              <p>The goal of the project was to create a model to predict home prices in Ames, Iowa using a dataset with around 2000 homes and 80 features. I began by cleaning the data and exploring it to understand the relationships of the features with each other and with home prices. Once completed, I used background knowledge to create features that had stronger correlations with sale price. Using a few different functions that I created, I narrowed down the features to ones that were less correlated with each other and best correlated with sales prices. To create interaction terms I used polynomial features. Finally, I scaled the data, and optimized L1 and L2 regularized regressions to predict the home prices.</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary"></span>
@@ -125,6 +128,117 @@
 
         </div>
 
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">Programming Languages &amp; Libraries</div>
+          <!-- <ul class="list-inline dev-icons"> -->
+          <p><strong>Python</strong></p>
+          <ul class="fa-ul mb-0">
+
+            <li>
+              <i class="fa-li fab fa-python"></i> Scikit-learn
+            </li>
+            <li>
+              <i class="fa-li fab fa-python"></i> Statsmodels
+            </li>
+            <li>
+              <i class="fa-li fab fa-python"></i> Pandas
+            </li>
+            <li>
+              <i class="fa-li fab fa-python"></i> Matplotlib
+            </li>
+            <li>
+              <i class="fa-li fab fa-python"></i> Seaborn
+            </li>
+            <li>
+              <i class="fa-li fab fa-python"></i> Numpy
+            </li>
+            <!-- <li class="list-inline-item">
+              <i class="fab fa-python"></i>
+            </li> -->
+
+          </ul>
+
+          <br>
+          <p><strong>SQL</strong></p>
+          <br>
+          <div class="subheading mb-3">Machine Learning Tools</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-wrench"></i>
+              Generalized Linear Models
+            </li>
+            <li>
+              <i class="fa-li fa fa-wrench"></i>
+              Regularization
+            </li>
+            <li>
+              <i class="fa-li fa fa-wrench"></i>
+              Classification and Regression Trees
+            </li>
+            <li>
+              <i class="fa-li fa fa-wrench"></i>
+              Support Vector Machines
+            </li>
+            <li>
+              <i class="fa-li fa fa-wrench"></i>
+              Neural Networks
+            </li>
+            <li>
+              <i class="fa-li fa fa-wrench"></i>
+              Count and TFIDF Vectorizers
+            </li>
+            <li>
+              <i class="fa-li fa fa-wrench"></i>
+              Bagging and Boosting
+            </li>
+            <li>
+              <i class="fa-li fa fa-wrench"></i>
+              Clustering
+            </li>
+            <li>
+              <i class="fa-li fa fa-wrench"></i>
+              Principal Component Analysis
+            </li>
+            <li>
+              <i class="fa-li fa fa-wrench"></i>
+              Pipelines
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="work-experience">
+        <div class="my-auto">
+          <h2 class="mb-5">Work Experience</h2>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">6th GRADE MATH AND SCIENCE TEACHER</h3>
+              <div class="subheading mb-3">McAuliffe Charter School</div>
+              <ul>
+                <li>Created an alternate method for teaching computational skills, utilizing performance data, that resulted in a 50% increase of student mastery</li>
+                <li>Designed the 6th grade math and science curriculum by breaking down large concepts into understandable sequential steps</li>
+                <li>Co-created and installed a school-wide behavior management framework on the culture leadership team improving consistency and effectiveness of teacher expectations</li>
+                <li>Taught teachers how to successfully implement team building activities with students</li>
+                <li>On the academic leadership team, improved school wide academic performance in coordination with school leaders while balancing the needs of teachers</li>
+                <li>Communicated regularly with parents, administrators, and teachers on how to best support students</li>
+                <li>Strengthened student relationships by coaching the boys basketball team</li>
+              </ul>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2012 - August 2018</span>
+            </div>
+        </div>
+        <i class='fa fa-download'></i>
+        <a href="./ResumeDanTadmor.pdf" target="_blank" download>Resume</a>
       </section>
 
       <hr class="m-0">
@@ -137,6 +251,10 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">General Assembly</h3>
               <div class="subheading mb-3">Data Science Immersive</div>
+              <ul>
+                <li>Learned machine learning methods in Python over a 480 hour intensive course</li>
+                <li>Completed several <a href="#projects">projects</a> involving the full data science work flow.</li>
+              </ul>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">July 2018 - October 2018</span>
@@ -147,6 +265,11 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">ColumbiaX MicroMasters</h3>
               <div class="subheading mb-3">Artificial Intelligence Course</div>
+              <ul>
+                <li>Utilized natural language processing to conduct sentiment analysis on IMDB reviews</li>
+                <li>Built intelligent agents for search problems, games, and constraint problems</li>
+                <li>Created machine learning models using classification, linear regression, and perceptrons</li>
+              </ul>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">January 2018 - April 2018</span>
@@ -178,81 +301,6 @@
 
       <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-        <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
-
-          <div class="subheading mb-3">Programming Languages &amp; Libraries</div>
-          <!-- <ul class="list-inline dev-icons"> -->
-          <strong>Python</strong>
-          <ul class="fa-ul mb-0">
-
-            <li>
-              <i class="fa-li fab fa-python"></i> Scikit-learn
-            </li>
-            <li>
-              <i class="fa-li fab fa-python"></i> Statsmodels
-            </li>
-            <li>
-              <i class="fa-li fab fa-python"></i> Pandas
-            </li>
-            <li>
-              <i class="fa-li fab fa-python"></i> Matplotlib
-            </li>
-            <li>
-              <i class="fa-li fab fa-python"></i> Seaborn
-            </li>
-            <li>
-              <i class="fa-li fab fa-python"></i> Numpy
-            </li>
-            <!-- <li class="list-inline-item">
-              <i class="fab fa-python"></i>
-            </li> -->
-
-          </ul>
-          <br>
-          <div class="subheading mb-3">Machine Learning Tools</div>
-          <ul class="fa-ul mb-0">
-
-            <li>
-              <i class="fa-li fa fa-wrench"></i>
-              Regression
-            </li>
-            <li>
-              <i class="fa-li fa fa-wrench"></i>
-              Classification
-            </li>
-            <li>
-              <i class="fa-li fa fa-wrench"></i>
-              Count and TFIDF Vectorizers
-            </li>
-            <li>
-              <i class="fa-li fa fa-wrench"></i>
-              Bagging and Boosting
-            </li>
-            <li>
-              <i class="fa-li fa fa-wrench"></i>
-              Clustering
-            </li>
-            <li>
-              <i class="fa-li fa fa-wrench"></i>
-              Principal Component Analysis
-            </li>
-            <li>
-              <i class="fa-li fa fa-wrench"></i>
-              Pipelines
-            </li>
-            <li>
-              <i class="fa-li fa fa-wrench"></i>
-              Gridsearch
-            </li>
-
-          </ul>
-        </div>
-      </section>
-
-      <hr class="m-0">
-
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
           <h2 class="mb-5">Interests</h2>
@@ -260,7 +308,7 @@
           <div class="resume-content mr-auto">
             <h4 class="mb-0">Basketball</h4>
           </div>
-          <p>I am a huge fan of all things basketball. As much as possible, I like to play basketball. When that is not possible, I love watching the Celtics (or other NBA teams) play and I love analyzing teams used advanced analytics.</p>
+          <p>I am a huge fan of all things basketball. As much as possible, I like to play basketball. When that is not possible, I love watching the Celtics (or other NBA teams) and I love analyzing teams using advanced analytics.</p>
 
 
           <div class="resume-content mr-auto">
@@ -271,26 +319,20 @@
           <div class="resume-content mr-auto">
             <h4 class="mb-0">Books</h4>
           </div>
-          <p>When I have some free time to myself, I often fill it with reading. Mostly, I enjoy reading science fiction and fantasy. I am currently alternating between the Lord of the Rings series and Neil Gaiman books.</p>
+          <p>Probably the hobby I engage in most. When I have some free time to myself, especially when commuting, I often fill it with reading. Mostly, I enjoy reading science fiction and fantasy. I am currently alternating between the Lord of the Rings series and Neil Gaiman books.</p>
 
         </div>
       </section>
 
-      <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="certificates">
-        <div class="my-auto">
-          <h2 class="mb-5">Certificates</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-certificate text-warning"></i>
-              Middle School Math and Science Professional Teaching License - Massachusetts</li>
-            <li>
-              <i class="fa-li fa fa-certificate text-warning"></i>
-              <a href="https://courses.edx.org/certificates/bce22624d0744c758b336b3b29a9bc2d" target="_blank">CSMM.101x: Artificial Intelligence (AI) - ColumbiaX</a></li>
-          </ul>
-        </div>
-      </section>
+      <!-- <ul class="fa-ul mb-0">
+        <li>
+          <i class="fa-li fa fa-certificate text-warning"></i>
+          Middle School Math and Science Professional Teaching License - Massachusetts</li>
+        <li>
+          <i class="fa-li fa fa-certificate text-warning"></i>
+          <a href="https://courses.edx.org/certificates/bce22624d0744c758b336b3b29a9bc2d" target="_blank">CSMM.101x: Artificial Intelligence (AI) - ColumbiaX</a></li>
+      </ul> -->
 
     </div>
 
